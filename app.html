@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPauthentication</title>
+</head>
+<body>
+
+    <div id = "authResult"></div>
+
+    <script>
+        //correct username and password
+        const userName = "admin";
+        const password = "secret";
+
+        //prompt to ask the user input
+
+        let Username = prompt("Enter your username:");
+        let Password = prompt("Enter your password");
+
+        //authenticator function to check the credentionals
+        const authenticator = function(UserName, Password){
+            if (Username == "admin" && Password == "secret"){
+                return "Welcome Admin!";
+
+            }
+            else{
+                return "Bad Login Credentials";
+                
+            }
+        }
+        let refToDisplay = document.querySelector("#authResult");
+        refToDisplay.textContent = authenticator(Username, Password);
+    </script>
+</body>
+</html>
